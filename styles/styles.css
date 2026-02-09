@@ -255,3 +255,569 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+/* ========================================
+   DEPT COLOR PALETTE & DESIGN TOKENS
+   ======================================== */
+
+:root {
+  /* DEPT Primary Colors */
+  --dept-primary-purple: #5115f7;
+  --dept-primary-black: #121212;
+  --dept-primary-white: #ffffff;
+
+  /* DEPT Secondary Colors */
+  --dept-secondary-heather: #c2ced6;
+  --dept-secondary-conch: #d3ded9;
+  --dept-secondary-dimgray: #646464;
+  --dept-secondary-silver: #c4c4c4;
+  --dept-secondary-platinum: #f2f2f2;
+
+  /* DEPT Accent Colors */
+  --dept-accent-orange: #ff4901;
+  --dept-accent-orange-alt: #ff4e00;
+  --dept-accent-orange-light: #ff874c;
+  --dept-accent-cyan: #48c1ee;
+  --dept-accent-lime: #d0f900;
+  --dept-accent-green: #57ee6f;
+
+  /* DEPT Neutral Colors */
+  --dept-neutral-dark: #333333;
+  --dept-neutral-code-gray: #181818;
+  --dept-neutral-alabaster: #f9f9f9;
+  --dept-neutral-concrete: #f2f2f2;
+  --dept-neutral-iron: #dedfe1;
+  --dept-neutral-background: #f7f9fa;
+
+  /* DEPT Text Colors */
+  --dept-text-body-on-white: #767676;
+  --dept-text-body-on-black: #818181;
+
+  /* DEPT Spacing System */
+  --dept-spacing-xs: 0.5rem;
+  --dept-spacing-sm: 1.25rem;
+  --dept-spacing-md: 2.5rem;
+  --dept-spacing-lg: 5rem;
+  --dept-spacing-xl: 7.5rem;
+  --dept-spacing-xxl: 10rem;
+
+  /* DEPT Typography */
+  --dept-font-display: 'Inter Variable', ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell,
+    'Helvetica Neue', sans-serif;
+  --dept-font-body: 'Inter Variable', ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans', Ubuntu, Cantarell,
+    'Helvetica Neue', sans-serif;
+
+  /* DEPT Font Sizes - Heading */
+  --dept-font-size-h1: 3.75rem;
+  --dept-font-size-h2: 3rem;
+  --dept-font-size-h3: 2.875rem;
+  --dept-font-size-h4: 2.25rem;
+  --dept-font-size-h5: 1.875rem;
+  --dept-font-size-h6: 1.5rem;
+
+  /* DEPT Font Sizes - Body */
+  --dept-font-size-lg: 1.5rem;
+  --dept-font-size-base: 1.125rem;
+  --dept-font-size-sm: 1rem;
+  --dept-font-size-xs: 0.875rem;
+
+  /* DEPT Font Weights */
+  --dept-font-weight-light: 300;
+  --dept-font-weight-normal: 400;
+  --dept-font-weight-medium: 500;
+  --dept-font-weight-semibold: 600;
+  --dept-font-weight-bold: 700;
+  --dept-font-weight-heavy: 900;
+
+  /* DEPT Line Heights */
+  --dept-line-height-tight: 1;
+  --dept-line-height-normal: 1.25;
+  --dept-line-height-relaxed: 1.5;
+  --dept-line-height-loose: 1.75;
+
+  /* DEPT Border Radius */
+  --dept-radius-sm: 0.25rem;
+  --dept-radius-md: 0.5rem;
+  --dept-radius-lg: 1rem;
+  --dept-radius-full: 100rem;
+
+  /* DEPT Transitions */
+  --dept-transition-fast: 0.15s;
+  --dept-transition-base: 0.3s;
+  --dept-transition-slow: 0.45s;
+  --dept-easing-ease: ease;
+  --dept-easing-ease-in: cubic-bezier(0.49, 0.025, 0.65, 0.65);
+  --dept-easing-ease-out: cubic-bezier(0.28, 0.44, 0.49, 1);
+  --dept-easing-ease-in-out: cubic-bezier(0.4, 0.025, 0.49, 1);
+  --dept-easing-garret: cubic-bezier(0.5, 0, 0, 1);
+
+  /* DEPT Z-Index Scale */
+  --dept-z-index-dropdown: 10;
+  --dept-z-index-sticky: 20;
+  --dept-z-index-fixed: 30;
+  --dept-z-index-modal-backdrop: 40;
+  --dept-z-index-modal: 50;
+  --dept-z-index-popover: 60;
+  --dept-z-index-tooltip: 70;
+  --dept-z-index-notification: 80;
+  --dept-z-index-header: 99;
+  --dept-z-index-drawer: 101;
+}
+
+/* ========================================
+   DEPT TYPOGRAPHY COMPONENTS
+   ======================================== */
+
+.dept-heading {
+  font-family: var(--dept-font-display);
+  font-weight: var(--dept-font-weight-bold);
+  line-height: var(--dept-line-height-tight);
+  margin: 0;
+  padding: 0;
+}
+
+.dept-heading-xl {
+  font-size: var(--dept-font-size-h1);
+  letter-spacing: -0.03em;
+}
+
+.dept-heading-lg {
+  font-size: var(--dept-font-size-h2);
+  letter-spacing: -0.025em;
+}
+
+.dept-heading-md {
+  font-size: var(--dept-font-size-h3);
+  letter-spacing: -0.025em;
+}
+
+.dept-heading-sm {
+  font-size: var(--dept-font-size-h4);
+  letter-spacing: -0.02em;
+}
+
+.dept-body-lg {
+  font-family: var(--dept-font-body);
+  font-size: var(--dept-font-size-lg);
+  font-weight: var(--dept-font-weight-normal);
+  line-height: var(--dept-line-height-relaxed);
+}
+
+.dept-body {
+  font-family: var(--dept-font-body);
+  font-size: var(--dept-font-size-base);
+  font-weight: var(--dept-font-weight-normal);
+  line-height: var(--dept-line-height-relaxed);
+}
+
+.dept-body-sm {
+  font-family: var(--dept-font-body);
+  font-size: var(--dept-font-size-sm);
+  font-weight: var(--dept-font-weight-normal);
+  line-height: var(--dept-line-height-relaxed);
+}
+
+/* ========================================
+   DEPT BUTTON COMPONENTS
+   ======================================== */
+
+.dept-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--dept-font-body);
+  font-weight: var(--dept-font-weight-bold);
+  font-size: var(--dept-font-size-sm);
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--dept-radius-full);
+  padding: 0.75rem 2.25rem;
+  cursor: pointer;
+  transition: all var(--dept-transition-base)
+    var(--dept-easing-ease-in-out);
+  text-align: center;
+}
+
+.dept-button-primary {
+  background-color: var(--dept-primary-purple);
+  color: var(--dept-primary-white);
+}
+
+.dept-button-primary:hover {
+  background-color: var(--dept-primary-black);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.dept-button-secondary {
+  background-color: var(--dept-primary-black);
+  color: var(--dept-primary-white);
+}
+
+.dept-button-secondary:hover {
+  background-color: var(--dept-primary-purple);
+}
+
+.dept-button-outline {
+  background-color: transparent;
+  color: var(--dept-primary-black);
+  border: 2px solid var(--dept-primary-black);
+}
+
+.dept-button-outline:hover {
+  background-color: var(--dept-primary-black);
+  color: var(--dept-primary-white);
+}
+
+.dept-button-text {
+  background-color: transparent;
+  color: var(--dept-primary-purple);
+  padding: 0;
+  position: relative;
+}
+
+.dept-button-text:after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--dept-primary-purple);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--dept-transition-base)
+    var(--dept-easing-ease-in-out);
+}
+
+.dept-button-text:hover:after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ========================================
+   DEPT LINK COMPONENTS
+   ======================================== */
+
+.dept-link {
+  color: var(--dept-primary-purple);
+  text-decoration: none;
+  position: relative;
+  transition: color var(--dept-transition-base)
+    var(--dept-easing-ease-in-out);
+}
+
+.dept-link:hover {
+  color: var(--dept-primary-black);
+}
+
+.dept-link-underline {
+  border-bottom: 2px solid currentColor;
+  padding-bottom: 2px;
+}
+
+.dept-link-underline:hover {
+  border-bottom-color: var(--dept-primary-black);
+}
+
+/* ========================================
+   DEPT CARD COMPONENTS
+   ======================================== */
+
+.dept-card {
+  background-color: var(--dept-primary-white);
+  border: 1px solid var(--dept-neutral-iron);
+  border-radius: var(--dept-radius-md);
+  padding: var(--dept-spacing-md);
+  transition: all var(--dept-transition-base)
+    var(--dept-easing-ease-in-out);
+}
+
+.dept-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.dept-card-dark {
+  background-color: var(--dept-primary-black);
+  color: var(--dept-primary-white);
+  border-color: var(--dept-neutral-dark);
+}
+
+.dept-card-light {
+  background-color: var(--dept-neutral-alabaster);
+  color: var(--dept-primary-black);
+}
+
+/* ========================================
+   DEPT IMAGE COMPONENTS
+   ======================================== */
+
+.dept-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--dept-radius-md);
+}
+
+.dept-image-aspect-16-9 {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.dept-image-aspect-4-5 {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.dept-image-aspect-1 {
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+/* ========================================
+   DEPT FORM COMPONENTS
+   ======================================== */
+
+.dept-input,
+.dept-textarea,
+.dept-select {
+  font-family: var(--dept-font-body);
+  font-size: var(--dept-font-size-base);
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--dept-neutral-iron);
+  border-radius: var(--dept-radius-md);
+  transition: border-color var(--dept-transition-base)
+    var(--dept-easing-ease-in-out);
+  background-color: var(--dept-primary-white);
+  color: var(--dept-primary-black);
+}
+
+.dept-input:focus,
+.dept-textarea:focus,
+.dept-select:focus {
+  outline: none;
+  border-color: var(--dept-primary-purple);
+  box-shadow: 0 0 0 3px rgba(81, 21, 247, 0.1);
+}
+
+.dept-label {
+  display: block;
+  font-weight: var(--dept-font-weight-medium);
+  margin-bottom: 0.5rem;
+  color: var(--dept-primary-black);
+}
+
+/* ========================================
+   DEPT LAYOUT COMPONENTS
+   ======================================== */
+
+.dept-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--dept-spacing-md);
+}
+
+.dept-container-sm {
+  max-width: 640px;
+}
+
+.dept-container-md {
+  max-width: 960px;
+}
+
+.dept-container-lg {
+  max-width: 1280px;
+}
+
+.dept-container-xl {
+  max-width: 1440px;
+}
+
+.dept-grid {
+  display: grid;
+  gap: var(--dept-spacing-md);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.dept-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.dept-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.dept-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.dept-flex {
+  display: flex;
+  gap: var(--dept-spacing-md);
+}
+
+.dept-flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.dept-flex-between {
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ========================================
+   DEPT SECTION COMPONENTS
+   ======================================== */
+
+.dept-section {
+  padding: var(--dept-spacing-lg) var(--dept-spacing-md);
+}
+
+.dept-section-dark {
+  background-color: var(--dept-primary-black);
+  color: var(--dept-primary-white);
+}
+
+.dept-section-light {
+  background-color: var(--dept-neutral-alabaster);
+  color: var(--dept-primary-black);
+}
+
+.dept-section-white {
+  background-color: var(--dept-primary-white);
+  color: var(--dept-primary-black);
+}
+
+/* ========================================
+   DEPT UTILITY CLASSES
+   ======================================== */
+
+.dept-text-center {
+  text-align: center;
+}
+
+.dept-text-left {
+  text-align: left;
+}
+
+.dept-text-right {
+  text-align: right;
+}
+
+.dept-text-uppercase {
+  text-transform: uppercase;
+}
+
+.dept-text-lowercase {
+  text-transform: lowercase;
+}
+
+.dept-mb-0 {
+  margin-bottom: 0;
+}
+
+.dept-mb-xs {
+  margin-bottom: var(--dept-spacing-xs);
+}
+
+.dept-mb-sm {
+  margin-bottom: var(--dept-spacing-sm);
+}
+
+.dept-mb-md {
+  margin-bottom: var(--dept-spacing-md);
+}
+
+.dept-mb-lg {
+  margin-bottom: var(--dept-spacing-lg);
+}
+
+.dept-mt-0 {
+  margin-top: 0;
+}
+
+.dept-mt-xs {
+  margin-top: var(--dept-spacing-xs);
+}
+
+.dept-mt-sm {
+  margin-top: var(--dept-spacing-sm);
+}
+
+.dept-mt-md {
+  margin-top: var(--dept-spacing-md);
+}
+
+.dept-mt-lg {
+  margin-top: var(--dept-spacing-lg);
+}
+
+.dept-hidden {
+  display: none !important;
+}
+
+.dept-invisible {
+  visibility: hidden;
+}
+
+.dept-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - Mobile First
+   ======================================== */
+
+@media (max-width: 767px) {
+  :root {
+    --dept-spacing-md: 1.25rem;
+    --dept-spacing-lg: 2.5rem;
+    --dept-font-size-h1: 2.75rem;
+    --dept-font-size-h2: 2.25rem;
+    --dept-font-size-h3: 1.875rem;
+  }
+
+  .dept-grid-2,
+  .dept-grid-3,
+  .dept-grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .dept-section {
+    padding: var(--dept-spacing-md);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  :root {
+    --dept-spacing-md: 3.75rem;
+    --dept-spacing-lg: 7.5rem;
+    --dept-font-size-h1: 3.5rem;
+  }
+
+  .dept-grid-3,
+  .dept-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --dept-spacing-md: 5rem;
+    --dept-spacing-lg: 10rem;
+  }
+}

@@ -1,9 +1,11 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  background-color: var(--dept-primary-white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   width: 100%;
-  z-index: 2;
+  z-index: var(--dept-z-index-header);
   position: fixed;
+  top: 0;
 }
 
 header nav {
@@ -18,7 +20,8 @@ header nav {
   max-width: 1248px;
   height: var(--nav-height);
   padding: 0 24px;
-  font-family: var(--body-font-family);
+  font-family: var(--dept-font-body);
+  color: var(--dept-primary-black);
 }
 
 header nav[aria-expanded='true'] {
@@ -28,11 +31,25 @@ header nav[aria-expanded='true'] {
     'tools tools' var(--nav-height) / auto 1fr;
   overflow-y: auto;
   min-height: 100dvh;
+  background-color: var(--dept-primary-white);
+}
+
+header nav a {
+  color: var(--dept-primary-black);
+  text-decoration: none;
+  font-weight: var(--dept-font-weight-medium);
+  transition: color var(--dept-transition-base)
+    var(--dept-easing-ease-in-out);
+}
+
+header nav a:hover {
+  color: var(--dept-primary-purple);
 }
 
 @media (width >= 900px) {
   header .nav-wrapper {
     position: relative;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   }
 
   header nav {

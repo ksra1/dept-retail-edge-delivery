@@ -8,20 +8,37 @@
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+  border: 1px solid var(--dept-neutral-iron);
+  background-color: var(--dept-primary-white);
+  border-radius: var(--dept-radius-md);
+  overflow: hidden;
+  transition: all var(--dept-transition-base) var(--dept-easing-ease-in-out);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.cards > ul > li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .cards .cards-card-body {
   margin: 16px;
+  color: var(--dept-primary-black);
 }
 
 .cards .cards-card-image {
   line-height: 0;
+  overflow: hidden;
 }
 
 .cards > ul > li img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  transition: transform var(--dept-transition-base)
+    var(--dept-easing-ease-in-out);
+}
+
+.cards > ul > li:hover img {
+  transform: scale(1.05);
 }

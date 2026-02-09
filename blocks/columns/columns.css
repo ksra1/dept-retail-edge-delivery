@@ -1,14 +1,19 @@
 .columns > div {
   display: flex;
   flex-direction: column;
+  gap: var(--dept-spacing-md);
 }
 
 .columns img {
   width: 100%;
+  border-radius: var(--dept-radius-md);
+  transition: transform var(--dept-transition-base)
+    var(--dept-easing-ease-in-out);
 }
 
 .columns > div > div {
   order: 1;
+  color: var(--dept-primary-black);
 }
 
 .columns > div > .columns-img-col {
@@ -19,15 +24,33 @@
   display: block;
 }
 
+.columns > div > div p {
+  font: var(--dept-font-body);
+  line-height: var(--dept-line-height-relaxed);
+  margin: var(--dept-spacing-sm) 0;
+}
+
+.columns > div > div h2,
+.columns > div > div h3 {
+  font: var(--dept-font-display);
+  font-weight: var(--dept-font-weight-bold);
+  line-height: var(--dept-line-height-tight);
+  letter-spacing: -0.025em;
+}
+
 @media (width >= 900px) {
   .columns > div {
     align-items: center;
     flex-direction: unset;
-    gap: 24px;
+    gap: var(--dept-spacing-lg);
   }
 
   .columns > div > div {
     flex: 1;
     order: unset;
+  }
+
+  .columns img:hover {
+    transform: scale(1.02);
   }
 }
