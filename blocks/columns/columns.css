@@ -25,14 +25,14 @@
 }
 
 .columns > div > div p {
-  font: var(--dept-font-body);
+  font-family: var(--dept-font-body);
   line-height: var(--dept-line-height-relaxed);
   margin: var(--dept-spacing-sm) 0;
 }
 
 .columns > div > div h2,
 .columns > div > div h3 {
-  font: var(--dept-font-display);
+  font-family: var(--dept-font-display);
   font-weight: var(--dept-font-weight-bold);
   line-height: var(--dept-line-height-tight);
   letter-spacing: -0.025em;

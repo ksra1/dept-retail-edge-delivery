@@ -17,7 +17,7 @@
   margin-left: auto;
   margin-right: auto;
   color: var(--dept-primary-white);
-  font: var(--dept-font-display);
+  font-family: var(--dept-font-display);
   font-size: var(--dept-font-size-h1);
   font-weight: var(--dept-font-weight-heavy);
   line-height: var(--dept-line-height-tight);
@@ -34,7 +34,7 @@
   box-sizing: border-box;
 }
 
-.hero picture:after {
+.hero:after {
   content: '';
   position: absolute;
   inset: 0;
@@ -44,6 +44,7 @@
     rgba(0, 0, 0, 0.5) 100%
   );
   z-index: 1;
+  pointer-events: none;
 }
 
 .hero img {
@@ -61,4 +62,6 @@
   .hero h1 {
     font-size: var(--dept-font-size-h1);
   }
+}
+
 }
